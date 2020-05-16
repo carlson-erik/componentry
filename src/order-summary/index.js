@@ -16,17 +16,23 @@ const Modal = styled.div`
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.20);
   padding: 0 0.5rem 0.5rem 0.5rem;
   font-family: 'Karla', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const ContentContainer = styled.div`
   display: flex;
-`
+  flex-direction: column;
+  align-items: center;
+`;
 
-const Column = styled.div`
+const DetailsContainer = styled.div`
   width: ${props => props.width || '100'}%;
 `;
 
 const ProgressionContainer = styled.div`
+  width: 95%;
   padding: 0.5rem 0 0.5rem 0;
   border-bottom: 1px #d0d0d0 solid;
 `;
@@ -39,15 +45,13 @@ const OrderSummary = () => {
         <ProgressionBar items={progressionItems} />
       </ProgressionContainer>
       <ContentContainer>
-        <Column width={60}>
+        <DetailsContainer width={80}>
           <OrderDetails cart={cart}/>
-        </Column>
-        <Column width={40}>
-          <DeliveryInfo {...order}/>
-        </Column>
+        </DetailsContainer>
+        <DeliveryInfo {...order}/>
       </ContentContainer>
     </Modal>
   )
-}
+};
 
 export default OrderSummary;

@@ -10,9 +10,19 @@ const Section = styled.div`
   padding-bottom: 0.5rem;
 `;
 
+const MiddleSection = styled(Section)`
+  padding: 0 0.5rem 0.5rem 0.5rem;
+`;
+
 const TextLine = styled.span`
   font-size: 14px;
   display: flex;
+`;
+
+const InfoContainer = styled(Container)`
+  display: flex;
+  width: 95%;
+  border-radius: 0.25rem;
 `;
 
 const DeliveryInfo = (props) => {
@@ -21,7 +31,7 @@ const DeliveryInfo = (props) => {
   const { street, town, state, country, zip } = address;
   const {email, phone} = contact;
   return (
-    <Container>
+    <InfoContainer>
       <Section>
         <H4Title>Contact Information</H4Title>
         <TextContainer>
@@ -30,13 +40,13 @@ const DeliveryInfo = (props) => {
           <TextLine>{phone}</TextLine>
         </TextContainer>
       </Section>
-      <Section>
+      <MiddleSection>
         <H4Title>Address</H4Title>
         <TextContainer>
           <TextLine>{street}</TextLine>
           <TextLine>{town}, {state}, {country} {zip}</TextLine>
         </TextContainer>
-      </Section>
+      </MiddleSection>
       <Section>
         <H4Title>Payment Details</H4Title>
         <TextContainer >
@@ -50,7 +60,7 @@ const DeliveryInfo = (props) => {
           </TextLine>
         </TextContainer>
       </Section>
-    </Container>
+    </InfoContainer>
   );
 };
 

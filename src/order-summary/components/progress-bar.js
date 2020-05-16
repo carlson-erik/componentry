@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle, faQuestionCircle, faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faQuestion, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 // --------- Data ---------
 import {statuses} from '../data';
 // --------- Styled Components ---------
@@ -17,8 +17,7 @@ const Item = styled.div`
   align-items:center;
   padding: 0.25rem 0.75rem 0.25rem 0.75rem;
   border-radius: 8px;
-  font-weight: bold;
-  color: grey;
+  color: #969696;
   & > svg {
     height: 1.25rem;
     width: 1.25rem !important;
@@ -35,6 +34,7 @@ const ActiveItem = styled(Item)`
 
 const Name = styled.span`
   padding-top: 0.25rem;
+  font-weight: bold;
 `;
 
 // --------- Components ---------
@@ -44,21 +44,21 @@ const ProgressionItem = (props) => {
     case statuses.ACTIVE:
       return (
         <ActiveItem>
-          <FontAwesomeIcon icon={faArrowCircleRight} />
+          <FontAwesomeIcon icon={faArrowRight} />
           <Name>{name}</Name>
         </ActiveItem>
       );
     case statuses.COMPLETE: 
       return (
         <CompletedItem>
-          <FontAwesomeIcon icon={faCheckCircle} />
+          <FontAwesomeIcon icon={faCheck} />
           <Name>{name}</Name>
         </CompletedItem>
       );
     default: 
       return (
         <Item>
-          <FontAwesomeIcon icon={faQuestionCircle} />
+          <FontAwesomeIcon icon={faQuestion} />
           <Name>{name}</Name>
         </Item>
       );
