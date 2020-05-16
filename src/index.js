@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 
-const App = (props) => {
+const App = () => {
   return(
-    <div>look at storybook for all the work in this repo</div>
+    <div>start storybook to view components</div>
   )
 }
 
