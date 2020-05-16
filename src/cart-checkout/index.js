@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 // --------- Components ---------
-import CartList from './components/cart-list';
+import OrderSummary from './components/order-summary';
+import DeliveryInfo from './components/delivery';
 
 const Modal = styled.div`
   width: 600px;
@@ -41,26 +42,47 @@ const dataModel = {
       name: 'Apple iPhone Xr',
       price: 709.99,
     },
+    {
+      id: 'skittles-lb-bag',
+      name: 'Skittles (1lb)',
+      price: 25.99,
+    },
+    {
+      id: 'razer-laptop',
+      name: 'Razer Blade Stealth (13in)',
+      price: 1859.99,
+    },
   ],
-  user : {
-    firstName: 'Erik',
-    lastName: 'Carlson',
-    address: '123 Lorem Ipsum Lane',
-    town: 'Dover',
-    countryCode: 'US',
-    zip: '03820'
+  order : {
+    name: {
+      first: 'Erik',
+      last: 'Carlson',
+    },
+    address: {
+      street: '123 Lorem Ipsum Lane',
+      town: 'Dover',
+      state: 'NH',
+      country: 'US',
+      zip: '03820',
+    },
+    contact: {
+      phone: '(603)-553-8099',
+      email: 'carlsonerikw@gmail.com',
+    }
   },
   payment: {},
 };
 
 const CartCheckout = () => {
-  const {cart} = dataModel;
+  const {cart, order} = dataModel;
   return (
     <Modal>
-      <Column width={50}>
-        <CartList cart={cart}/>
+      <Column width={60}>
+        <OrderSummary cart={cart}/>
       </Column>
-      <Column width={50}>right side</Column>
+      <Column width={40}>
+        <DeliveryInfo {...order}/>
+      </Column>
     </Modal>
   )
 }
