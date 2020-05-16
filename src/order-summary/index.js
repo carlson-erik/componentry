@@ -3,10 +3,11 @@ import styled from 'styled-components';
 // --------- Components ---------
 import OrderSummary from './components/order-summary';
 import DeliveryInfo from './components/delivery';
+import OrderProgression from './components/order-progression';
 
 const Modal = styled.div`
   width: 600px;
-  display: flex;
+  
   border: 1px #d0d0d0 solid;
   border-radius: 0.25rem;
   -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.20);
@@ -15,6 +16,10 @@ const Modal = styled.div`
   padding: 0.5rem;
   font-family: 'Karla', sans-serif;
 `;
+
+const ContentContainer = styled.div`
+  display: flex;
+`
 
 const Column = styled.div`
   width: ${props => props.width || '100'}%;
@@ -77,12 +82,16 @@ const CartCheckout = () => {
   const {cart, order} = dataModel;
   return (
     <Modal>
-      <Column width={60}>
-        <OrderSummary cart={cart}/>
-      </Column>
-      <Column width={40}>
-        <DeliveryInfo {...order}/>
-      </Column>
+      <OrderProgression/>
+      <ContentContainer>
+        <Column width={60}>
+          <OrderSummary cart={cart}/>
+        </Column>
+        <Column width={40}>
+          <DeliveryInfo {...order}/>
+        </Column>
+      </ContentContainer>
+      
     </Modal>
   )
 }
