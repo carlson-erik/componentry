@@ -1,10 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import CartCheckout from './index';
+import OrderSummary from './index';
 
 storiesOf('Components', module)
-  .add('CartCheckout', () => {
+  .add('Order Summary', () => {
     return(
-      <CartCheckout/>
+      <OrderSummary/>
     )
   });

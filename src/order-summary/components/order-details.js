@@ -47,7 +47,7 @@ const CartItem = (props) => {
   )
 }
 
-const OrderSummary = (props) => {
+const OrderDetails = (props) => {
   const {cart} = props;
   let total = 0;
   cart.forEach(({price}) => {total += price;});
@@ -65,4 +65,4 @@ const OrderSummary = (props) => {
   );
 };
 
-export default OrderSummary;
+export default OrderDetails;
