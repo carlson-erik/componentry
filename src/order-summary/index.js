@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import OrderDetails from './components/order-details';
 import DeliveryInfo from './components/delivery';
 import ProgressionBar from './components/progress-bar';
+import SubmitBar from './components/submit-bar';
 // --------- Data ---------
 import {progressionItems, dataModel} from './data';
 
@@ -37,7 +38,15 @@ const ProgressionContainer = styled.div`
   border-bottom: 1px #d0d0d0 solid;
 `;
 
-const OrderSummary = () => {
+const SubmitContainer = styled.div`
+  width: 95%;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0 0.5rem 0;
+  border-top: 1px #d0d0d0 solid;
+`;
+
+const OrderSummary = (props) => {
+  const {onSubmit, onCancel} = props;
   const {cart, order} = dataModel;
   return (
     <Modal>
@@ -50,6 +59,9 @@ const OrderSummary = () => {
         </DetailsContainer>
         <DeliveryInfo {...order}/>
       </ContentContainer>
+      <SubmitContainer>
+        <SubmitBar onSubmit={onSubmit} onCancel={onCancel}/>
+      </SubmitContainer>
     </Modal>
   )
 };

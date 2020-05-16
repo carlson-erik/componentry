@@ -38,6 +38,11 @@ const TotalPrice =styled.span`
   font-size: 14px;
 `;
 
+const OrderContainer = styled(Container)`
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+`;
+
 const CartItem = (props) => {
   return (
     <Item>
@@ -52,7 +57,7 @@ const OrderDetails = (props) => {
   let total = 0;
   cart.forEach(({price}) => {total += price;});
   return (
-    <Container>
+    <OrderContainer>
       <H3Title>Order Summary</H3Title>
       <List>
         {cart.map(value => <CartItem key={value.id} {...value} />)}
@@ -61,7 +66,7 @@ const OrderDetails = (props) => {
         <TotalPriceLabel>Total Price:</TotalPriceLabel>
         <TotalPrice> ${total}</TotalPrice>
       </TotalPriceContainer>
-    </Container>
+    </OrderContainer>
   );
 };
 
