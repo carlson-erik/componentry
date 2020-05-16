@@ -16,7 +16,6 @@ const Item = styled.div`
   flex-direction: column;
   align-items:center;
   padding: 0.25rem 0.75rem 0.25rem 0.75rem;
-  border-radius: 8px;
   color: #969696;
   & > svg {
     height: 1.25rem;
@@ -30,6 +29,10 @@ const CompletedItem = styled(Item)`
 
 const ActiveItem = styled(Item)`
   color: blue;
+  border: 1px blue solid;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  margin: 0.25rem 0.5rem 0.25rem 0.5rem;
+  border-radius: 4px;
 `;
 
 const Name = styled.span`
