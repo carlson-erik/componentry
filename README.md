@@ -1,6 +1,6 @@
 # Componentry
 
-This repository holds all of the various React components that I've buiilt for fun. 
+This repository holds all of the various React components that I've built for fun. 
 
 ## Components 
 
