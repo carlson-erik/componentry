@@ -28,7 +28,7 @@ This repository holds all of the various React components that I've built for fu
 
 **Description:** A typical pricing component that shows 3 different pricing plans with one being highlighted as the preferred plan.
 
-**Status:** Idea 
+**Status:** Planning
 
 ### Reviews
 
