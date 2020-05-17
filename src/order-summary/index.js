@@ -9,7 +9,7 @@ import SubmitBar from './components/submit-bar';
 import {progressionItems, dataModel} from './data';
 
 const Modal = styled.div`
-  width: 600px;
+  width: ${props => props.width || '600'}px;
   border: 1px #d0d0d0 solid;
   border-radius: 0.25rem;
   -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.20);
@@ -45,10 +45,10 @@ const SubmitContainer = styled.div`
 `;
 
 const OrderSummary = (props) => {
-  const {onSubmit, onCancel} = props;
+  const {onSubmit, onCancel, modalWidth} = props;
   const {cart, order} = dataModel;
   return (
-    <Modal>
+    <Modal width={modalWidth}>
       <ProgressionContainer>
         <ProgressionBar items={progressionItems} />
       </ProgressionContainer>

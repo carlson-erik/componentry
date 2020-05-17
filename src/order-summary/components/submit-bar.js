@@ -14,9 +14,9 @@ const Bar = styled.div`
 
 const SubmitBar = (props) => {
   const {onSubmit, onCancel} = props;
-  return(
+  return (
     <Bar>
-      <Button onClick={onSubmit}>Submit</Button>
+      <Button active onClick={onSubmit}>Submit</Button>
       <Button onClick={onCancel}>Cancel</Button>
     </Bar>
   )

@@ -13,7 +13,6 @@ const ResetButton = styled.button`
 `;
 
 const StyledButton = styled(ResetButton)`
-  /* default for <button>, but needed for <a> */
   display: inline-block;
   text-align: center;
   text-decoration: none;
@@ -30,30 +29,37 @@ const StyledButton = styled(ResetButton)`
 
   /* make sure colors have enough contrast! */
   color: #FFFFFF;
-  background-color: #9555AF;
-
+  background-color: ${props => props.bgcolor || '#9555AF'};
+  
   &:active {
     transform: translateY(1px);
     filter: saturate(150%);
   }
 
   &:hover {
-    color: #9050AA;
+    color: ${props => props.textColor || '#9050AA'};
     border-color: currentColor;
     background-color: white;
   }
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.5),
-      0 0 0 1.5px rgba(255, 105, 180, 0.5);
+    box-shadow: 0 0 0 3px ${props => props.shadowColor || 'rgba(255, 105, 180, 0.5)'},
+      0 0 0 1.5px ${props => props.shadowColor || 'rgba(255, 105, 180, 0.5)'};
   }
 `;
 
 const Button = (props) => {
-  const {children, onClick} = props;
+  const {children, onClick, active} = props;
+  const bgcolor = active ? 'blue' : '#969696';
+  const textColor = active ? 'blue' : '#969696';
+  const shadowColor = active ? 'rgba(0, 0, 255, 0.5)' : 'rgb(150, 150, 150, 0.5)';
   return (
-    <StyledButton onClick={onClick}>
+    <StyledButton 
+      bgcolor={bgcolor} 
+      textColor={textColor}
+      shadowColor={shadowColor} 
+      onClick={onClick}>
       {children}
     </StyledButton>
   )
