@@ -12,6 +12,38 @@ This repository holds all of the various React components that I've buiilt for f
 
 **Future Plans:** I want to upgrade the Modal component handle going between multiple views. 
 
+### User Profile 
+
+**Description:** A component that shows a user's profile picture and relevant site stats below it. I could see this component turning into something large as a user profile "panel" or even a full blown profile component. The stats should be dynamic for greater reusability.
+
+**Status:** Idea
+
+### Pokedex
+
+**Description:** Using the [PokeAPI](https://pokeapi.co/), build a Pokedex app. It should allow the user to view each pokemon availible as well as sorting by generation, type, evolution stage, etc. 
+
+**Status:** Idea 
+
+### Pricing
+
+**Description:** A typical pricing component that shows 3 different pricing plans with one being highlighted as the preferred plan.
+
+**Status:** Idea 
+
+### Reviews
+
+**Description:** A component that visually and literally shows the 1-5 star ratings and how many of them there are for a given product.
+
+**Status:** Idea 
+
+<!-- 
+### Future Component
+
+**Description:** A little something about this component.
+
+**Status:** Idea 
+-->
+
 ## Available Scripts
 
 In the project directory, you can run:
