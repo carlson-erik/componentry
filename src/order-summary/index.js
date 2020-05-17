@@ -34,14 +34,13 @@ const DetailsContainer = styled.div`
 
 const ProgressionContainer = styled.div`
   width: 95%;
-  padding: 0.5rem 0 0.5rem 0;
+  padding: 1.5rem 0 1.5rem 0;
   border-bottom: 1px #d0d0d0 solid;
 `;
 
 const SubmitContainer = styled.div`
   width: 95%;
-  margin-top: 0.5rem;
-  padding: 0.5rem 0 0.5rem 0;
+  padding: 1.5rem 0 1rem 0;
   border-top: 1px #d0d0d0 solid;
 `;
 

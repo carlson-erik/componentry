@@ -40,7 +40,7 @@ const TotalPrice =styled.span`
 
 const OrderContainer = styled(Container)`
   padding-top: 1.5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1.5rem;
 `;
 
 const CartItem = (props) => {

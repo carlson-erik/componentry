@@ -52,7 +52,7 @@ const DeliveryInfo = (props) => {
         <TextContainer >
           <TextLine>
             <Label>Credit Card:</Label>
-            ************3921
+            *****3921
           </TextLine>
           <TextLine>
             <Label>Expiration:</Label>

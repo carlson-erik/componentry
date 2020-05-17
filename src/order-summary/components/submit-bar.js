@@ -1,21 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faQuestion, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-// --------- Data ---------
-import {statuses} from '../data';
+import Button from './button';
 // --------- Styled Components ---------
 const Bar = styled.div`
   display: flex;
   justify-content: center;
+  align-content: center;
+
+  & > * {
+    margin: 0 1rem 0 1rem;
+  }
 `;
 
 const SubmitBar = (props) => {
   const {onSubmit, onCancel} = props;
   return(
     <Bar>
-      <div>submit</div>
-      <div>cancel</div>
+      <Button onClick={onSubmit}>Submit</Button>
+      <Button onClick={onCancel}>Cancel</Button>
     </Bar>
   )
 };

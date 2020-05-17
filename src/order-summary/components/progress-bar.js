@@ -11,11 +11,10 @@ const Bar = styled.div`
 `;
 
 const Item = styled.div`
-  margin: 0.25rem;
   display: flex;
   flex-direction: column;
   align-items:center;
-  padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+  padding: 0 1rem 0 1rem;
   color: #969696;
   & > svg {
     height: 1.25rem;
@@ -29,10 +28,6 @@ const CompletedItem = styled(Item)`
 
 const ActiveItem = styled(Item)`
   color: blue;
-  border: 1px blue solid;
-  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
-  margin: 0.25rem 0.5rem 0.25rem 0.5rem;
-  border-radius: 4px;
 `;
 
 const Name = styled.span`
